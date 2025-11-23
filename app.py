@@ -1,5 +1,5 @@
 import os
-def create_file(filename):
+def create_file(filename): #defining function to create file
     try:
         with open(filename,'x') as f:
             print(f'File {filename} Created Successfully! ')
@@ -8,7 +8,7 @@ def create_file(filename):
     except Exception as E:
         print("An Error Occured ")
 
-def view_all_files():
+def view_all_files(): #defining function to view all files present
     files = os.listdir()
     if not files:
         print("No file found")
@@ -16,7 +16,7 @@ def view_all_files():
         for file in files:
             print(file)
             
-def delete_file(filename):
+def delete_file(filename): #defining function to delete mentioned file
     try:
         os.remove(filename)
         print(f"File {filename} has been removed successfully !")
@@ -26,7 +26,7 @@ def delete_file(filename):
     except Exception as e:
         print("An error Occured")
 
-def read_file(filename):
+def read_file(filename): #defining function to read a file
     try:
         with open(filename, 'r')as f:
             content = f.read()
@@ -38,7 +38,7 @@ def read_file(filename):
     except Exception as e:
         print("An Error Occured !")
 
-def edit_file(filename):
+def edit_file(filename): #defining function to edit a file
     try:
         with open(filename,'a') as f:
             content = input('Enter data to add -')
@@ -50,7 +50,7 @@ def edit_file(filename):
     except Exception as e:
         print("An Error Occured !")
 
-def main():
+def main(): #main function
     while True:
         print()
         print()
@@ -95,4 +95,5 @@ def main():
 
 if __name__ == "__main__" :
     main()            
+
         
